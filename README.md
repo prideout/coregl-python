@@ -18,14 +18,13 @@ Install Qt for Mac
 Hack, Build, and Install PyQt for Mac
 ----
 
-Needs some hackery to get core profile to work on mac!
+Here's some hackery to get core profile to work on mac.
 
 1. wget http://downloads.sf.net/project/pyqt/sip/sip-4.13.3/sip-4.13.3.tar.gz
 2. build & install sip in the usual way
 3. wget http://downloads.sf.net/project/pyqt/PyQt4/PyQt-4.9.4/PyQt-mac-gpl-4.9.4.tar.gz
-4. build PyQt as follows:
 
-Here's how you can build PyQt using some hacks I've provided to get core profile working on Lion (Qt doesn't support it at the time of this writing).
+Next you'll build PyQt using some hacks I've provided to get core profile working on Lion.  Qt doesn't support core profile for Lion at the time of this writing.
 
     tar xvf PyQt-mac-gpl-4.9.4.tar.gz
     mv PyQt-mac-gpl-4.9.4 PyQt4
