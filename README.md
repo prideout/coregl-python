@@ -21,6 +21,8 @@ Needs some hackery to get core profile to work on mac!
 3. wget http://downloads.sf.net/project/pyqt/PyQt4/PyQt-4.9.4/PyQt-mac-gpl-4.9.4.tar.gz
 4. build PyQt with some hacks:
 
+Test
+
     tar xvf PyQt-mac-gpl-4.9.4.tar.gz
     mv PyQt-mac-gpl-4.9.4 PyQt4
     cp -r pyqt-hacks/ PyQt4 ; # trailing slash required to overlay files
