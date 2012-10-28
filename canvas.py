@@ -38,7 +38,7 @@ class Canvas(GLWidget):
     def initializeGL(self):
         print glGetString(GL_VERSION)
         glClearColor(0.0, 0.25, 0.5, 1.0)
-        self.programs = shaders.load_shaders()
+        self.programs = load_shaders()
         self.vao = glGenVertexArrays(1)
         self.pointsVbo = glGenBuffers(1)
         self.indicesVbo = glGenBuffers(1)

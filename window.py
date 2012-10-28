@@ -1,5 +1,5 @@
 from PyQt4 import QtGui, QtCore
-from canvas import *
+from canvas import Canvas
 
 class Window(QtGui.QMainWindow):
     def __init__(self):

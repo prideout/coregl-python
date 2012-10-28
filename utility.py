@@ -2,9 +2,10 @@ from PyQt4 import QtCore
 from PyQt4.QtOpenGL import *
 from OpenGL.GL import *
 from time import time
-import sys, math
+import math
+
 import numpy as np
-import transformations as xforms
+from numpy import linalg as LA
 
 # Set this 'None' to refresh as rapidly as possible
 ThrottleFps = 60
@@ -18,15 +19,20 @@ def U(name):
 def V3(x, y, z):
     return np.array([x, y, z], 'f')
 
+def translation(direction):
+    M = np.identity(4)
+    M[:3, 3] = direction[:3]
+    return M
+
 def look_at(eye, target, up):
     F = target[:3] - eye[:3]
-    f = xforms.unit_vector(F)
-    U = xforms.unit_vector(up[:3])
+    f = F / LA.norm(F)
+    U = up / LA.norm(up)
     s = np.cross(f, U)
     u = np.cross(s, f)
     M = np.matrix(np.identity(4))
     M[:3,:3] = np.vstack([s,u,-f])
-    T = xforms.translation_matrix(-eye)
+    T = translation(-eye)
     return np.matrix(M * T, 'f')
 
 def perspective(fovy, aspect, f, n):
