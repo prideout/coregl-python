@@ -3,11 +3,12 @@
 
 from PyQt4 import QtGui
 from window import Window
+from demoCanvas import DemoCanvas
 import sys
 
 def main():
     app = QtGui.QApplication(sys.argv)
-    win = Window()
+    win = Window(DemoCanvas)
     win.raise_()
 
     pts = [ 50.,   0.,  50.,
