@@ -3,7 +3,7 @@ Overview
 
 This is a simple example of using the OpenGL Core Profile (aka "modern" OpenGL) with PyQt, numpy, and PyOpenGL.
 
-The `demoCanvas` class is a good starting point to explore the demo code.  It derives from `Canvas` which derives from `QGLWidget`.
+The [DemoCanvas](https://github.com/prideout/coregl-python/blob/master/demoCanvas.py) class is a good starting point to explore the demo code.  It derives from [Canvas](https://github.com/prideout/coregl-python/blob/master/canvas.py) which derives from `QGLWidget`.
 
 I've provided `translation`, `look_at`, and `projection` functions in [utility.py](https://github.com/prideout/coregl-python/blob/master/utility.py).  For a more thorough set of affine transformations wih numpy, take a look at some code from Christoph Gohlke:
 
