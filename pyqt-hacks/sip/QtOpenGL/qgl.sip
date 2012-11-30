@@ -261,12 +261,8 @@ protected:
 %End
 %End
 
-// /Users/prideout/github/sandbox/pyqt/sip/QtOpenGL/qgl.sip: In function ‘PyObject* meth_QGLContext_chooseMacVisual(PyObject*, PyObject*)’:
-// /Users/prideout/github/sandbox/pyqt/sip/QtOpenGL/qgl.sip:266: error: invalid conversion from ‘void*’ to ‘PyObject*’
-// /Users/prideout/github/sandbox/pyqt/QtOpenGL/sipQtOpenGLQGLContext.cpp:693: warning: unused variable ‘sipSelfWasArg’
-
 %TypeCode
-    void* chooseMacVisual(GDHandle handle)
+    virtual void* chooseMacVisual(GDHandle handle)
     {
         return select_3_2_mac_visual();
     }

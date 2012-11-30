@@ -37,5 +37,6 @@ Next you'll build PyQt using some hacks I've provided to get core profile workin
            --destdir=/usr/local/Cellar/pyqt/4.9.4/lib/python2.7/site-p
     make -j2
     sudo make install
-    rm -rf PyQt4
+    cd ..; mv PyQt4 PyQt4.done
 
+After the `make`, you might see an error about `virtual` being outside a class.  Sometimes `%TypeCode` doesn't work as expected and sip places the `chooseMacVisual` method outside the class declaration, in which case you'll need to hand-edit the generated file (`./QtOpenGL/sipQtOpenGLQGLContext.cpp`) and copy-paste it into the class declaration.

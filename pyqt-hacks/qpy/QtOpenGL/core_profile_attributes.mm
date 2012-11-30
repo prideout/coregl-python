@@ -18,6 +18,5 @@ void* select_3_2_mac_visual()
     attribs[cnt] = 0;
     Q_ASSERT(cnt < Max);
    
- 
     return [[NSOpenGLPixelFormat alloc] initWithAttributes:attribs];
 }
