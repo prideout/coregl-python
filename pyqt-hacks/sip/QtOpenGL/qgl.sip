@@ -266,7 +266,7 @@ protected:
 // /Users/prideout/github/sandbox/pyqt/QtOpenGL/sipQtOpenGLQGLContext.cpp:693: warning: unused variable ‘sipSelfWasArg’
 
 %TypeCode
-    virtual void* chooseMacVisual(GDHandle handle)
+    void* chooseMacVisual(GDHandle handle)
     {
         return select_3_2_mac_visual();
     }

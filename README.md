@@ -35,5 +35,7 @@ Next you'll build PyQt using some hacks I've provided to get core profile workin
     python ./configure.py --confirm-license \
            --bindir=/usr/local/Cellar/pyqt/4.9.4/bin \
            --destdir=/usr/local/Cellar/pyqt/4.9.4/lib/python2.7/site-p
-    make
+    make -j2
     sudo make install
+    rm -rf PyQt4
+
